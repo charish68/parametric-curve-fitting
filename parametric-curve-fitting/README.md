@@ -59,21 +59,29 @@ $$
 
 from the supplied `(x, y)` data.
 
-The parameters have the following meaning:
+## The Given Parametric Curve
 
-| Parameter | Meaning |
-|---|---|
-| `theta` | Rotation angle |
-| `M` | Exponential parameter |
-| `X` | Horizontal offset |
+The given parametric curve is defined by the following two equations:
 
-The challenge is that the parameter `t` is also not directly provided
-in the CSV file.
+$$
+x(t)=t\cos(\theta)-e^{M|t|}\sin(0.3t)\sin(\theta)+X
+$$
 
-Therefore, the solution needs to recover `t` from the observed
-coordinates before comparing the data with the original mathematical
-model.
+$$
+y(t)=42+t\sin(\theta)+e^{M|t|}\sin(0.3t)\cos(\theta)
+$$
 
+where:
+
+$$
+6<t<60
+$$
+
+The three unknown parameters are:
+
+- $\theta$ — rotation angle
+- $M$ — exponential parameter
+- $X$ — horizontal offset
 
 ---
 

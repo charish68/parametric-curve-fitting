@@ -1,6 +1,6 @@
 # Parametric Curve Fitting and Parameter Estimation
 
-## Overview
+## About This Project
 
 This project solves a parametric curve fitting problem using a dataset
 containing 1500 `(x, y)` points.
@@ -15,44 +15,69 @@ data:
 The given parametric curve is:
 
 $$
-x(t)=t\cos(\theta)-e^{M|t|}\sin(0.3t)\sin(\theta)+X
+x(t)
+=
+t\cos(\theta)
+-
+e^{M|t|}
+\sin(0.3t)\sin(\theta)
++
+X
 $$
 
 $$
-y(t)=42+t\sin(\theta)+e^{M|t|}\sin(0.3t)\cos(\theta)
+y(t)
+=
+42+t\sin(\theta)
++
+e^{M|t|}
+\sin(0.3t)\cos(\theta)
 $$
 
-where
+where:
 
 $$
 6<t<60
 $$
 
-
-## Final Result
-
-The numerical optimization recovered:
-
-| Parameter | Estimated Value | Rounded Value |
-|---|---:|---:|
-| Theta | 29.99997293216684° | 30° |
-| M | 0.029999996873069135 | 0.03 |
-| X | 54.99999821281624 | 55 |
-
-The final parameters are therefore:
+The final parameters obtained from the numerical optimization are:
 
 $$
-\boxed{\theta=30^\circ,\quad M=0.03,\quad X=55}
-$$
-
-The optimization produced a fitting error of:
-
-$$
-\boxed{1.8229979358776814\times10^{-8}}
+\boxed{\theta\approx30^\circ,\quad M\approx0.03,\quad X\approx55}
 $$
 
 
-## Dataset
+---
+
+# 1. Problem Statement
+
+The task is to determine the three unknown parameters:
+
+$$
+\theta,\ M,\ X
+$$
+
+from the supplied `(x, y)` data.
+
+The parameters have the following meaning:
+
+| Parameter | Meaning |
+|---|---|
+| `theta` | Rotation angle |
+| `M` | Exponential parameter |
+| `X` | Horizontal offset |
+
+The challenge is that the parameter `t` is also not directly provided
+in the CSV file.
+
+Therefore, the solution needs to recover `t` from the observed
+coordinates before comparing the data with the original mathematical
+model.
+
+
+---
+
+# 2. Dataset
 
 The input dataset is:
 

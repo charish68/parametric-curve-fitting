@@ -1,0 +1,29 @@
+Number of points: 1500
+
+Estimated parameters
+--------------------
+Theta = 29.99997293216684 degrees
+M     = 0.029999996873069135
+X     = 54.99999821281624
+
+Fitting error = 1.8229979358743158e-08
+
+T range
+-------
+Minimum t = 6.049405472704011
+Maximum t = 59.99517070233434
+
+Point reconstruction error
+--------------------------
+Total L1 error = 0.005245137757349028
+Mean L1 error  = 3.4967585048993516e-06
+Maximum L1 error = 2.406258323617294e-05
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 772, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/connection.py", line 37, in get_or_create_client
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/daemon.py", line 124, in start_daemon
+TimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit.

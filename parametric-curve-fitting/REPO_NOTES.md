@@ -1,1 +1,0 @@
-This repository was assembled from the user's assignment work, Python implementation, CSV dataset, handwritten derivation notes, and visualization screenshots. No external code license is asserted here.
